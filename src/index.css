@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(73, 50, 94);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.bd-lenght {
+  color: aliceblue;
+  margin: 0px;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 35px;
+}
+
+.bd-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.user-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 300px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.user-list-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 15px;
+}
+
+.name {
+  position: relative;
+  color: rgb(7, 7, 7);
+  font-weight: bold;
+  right: 20px;
+  font-size: 22px;
+}
+
+.person-delete-btn {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.person-delete-btn:hover {
+  color: black;
+}
+
+.person-delete-btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: white;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.person-delete-btn:hover::before {
+  width: 160%;
+}
+
+.clear-all {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background: #183153;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-all:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  color: black;
+}
+
+.clear-all:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  color: black;
+}
+
+.clear-all span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+
+.clear-all:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+  color: black;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
